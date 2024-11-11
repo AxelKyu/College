@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="factorial()">Factorial</button>
+    <button onclick="multiplicaton()">Table</button>
+    <p id="fac"></p>
+    <p id="mb"></p>
+
+    <script>
+        var num = parseInt(prompt("Enter a Number"));
+
+        // Factorial Of a Number
+        function factorial() {
+            let result = 1;
+            document.getElementById("fac").innerHTML = ''; // Clear previous output
+
+            for (var i = 1; i <= num; i++) {
+                result *= i;
+            }
+            document.getElementById("fac").innerHTML = "Factorial of " + num + " is " + result;
+        }
+
+        // Multiplication Table
+        function multiplicaton() {
+            document.getElementById("mb").innerHTML = ''; // Clear previous output
+
+            for (let index = 1; index <= 10; index++) {
+                document.getElementById("mb").innerHTML += num + " x " + index + " = " + (num * index) + "<br>";
+            }
+        }
+    </script>
+</body>
+</html>
